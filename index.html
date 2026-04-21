@@ -40,19 +40,19 @@
   
   <style>
     :root {
-      --bg-gradient: linear-gradient(135deg, #0a2f2d 0%, #0d3d3a 50%, #114240 100%);
-      --card-bg: rgba(255, 255, 255, 0.95);
-      --card-border: rgba(255, 255, 255, 0.3);
-    }
-    
-    .dark {
-      --bg-gradient: linear-gradient(135deg, #051a18 0%, #071f1d 50%, #0a2624 100%);
-      --card-bg: rgba(30, 41, 59, 0.95);
+      --bg-color: #1a1a1a;
+      --card-bg: rgba(40, 40, 40, 0.95);
       --card-border: rgba(255, 255, 255, 0.1);
     }
     
+    .dark {
+      --bg-color: #0d0d0d;
+      --card-bg: rgba(30, 30, 30, 0.95);
+      --card-border: rgba(255, 255, 255, 0.05);
+    }
+    
     body {
-      background: var(--bg-gradient);
+      background: var(--bg-color);
       min-height: 100vh;
       font-family: 'Inter', system-ui, sans-serif;
     }
@@ -170,8 +170,8 @@
           id="logoImage"
           src="images/logo.png" 
           alt="Logo der Pinéa Programmgruppe e.V." 
-          class="w-48 h-48 object-contain mx-auto mb-6 drop-shadow-2xl rounded-full"
-          onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 200%22%3E%3Cdefs%3E%3ClinearGradient id=%22grad%22 x1=%220%22 y1=%220%22 x2=%22100%25%22 y2=%22100%25%22%3E%3Cstop offset=%220%25%22 style=%22stop-color:%230d9488%22/%3E%3Cstop offset=%22100%25%22 style=%22stop-color:%23115e59%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx=%22100%22 cy=%22100%22 r=%2290%22 fill=%22url(%23grad)%22/%3E%3Ctext x=%22100%22 y=%22125%22 text-anchor=%22middle%22 fill=%22white%22 font-size=%2250%22 font-family=%22Inter%22 font-weight=%22bold%22%3EPP%3C/text%3E%3C/svg%3E'"
+          class="w-48 h-48 object-contain mx-auto mb-6 drop-shadow-2xl transition-transform duration-500 hover:scale-105"
+          onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 200%22%3E%3Crect x=%2220%22 y=%2220%22 width=%22160%22 height=%22160%22 fill=%22%230d9488%22/%3E%3Ctext x=%22100%22 y=%22125%22 text-anchor=%22middle%22 fill=%22white%22 font-size=%2250%22 font-family=%22Inter%22 font-weight=%22bold%22%3EPP%3C/text%3E%3C/svg%3E'"
         >
       </div>
       
