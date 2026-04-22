@@ -96,6 +96,20 @@
       background: #1877F2 !important;
     }
     
+    /* Alle Texte einheitlich färben */
+    h1, h2, h3, p, span, a {
+      color: var(--text-color);
+    }
+    
+    /* Ausnahme: Link-Buttons und Social Buttons behalten ihre weiße Schrift */
+    .link-button, .btn-instagram, .btn-youtube, .btn-facebook {
+      color: white !important;
+    }
+    
+    .link-button *, .btn-instagram *, .btn-youtube *, .btn-facebook * {
+      color: white !important;
+    }
+    
     /* Heading Images - Bild links, Text rechts */
     .heading-row {
       display: flex;
