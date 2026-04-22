@@ -101,13 +101,18 @@
       color: var(--text-color);
     }
     
-    /* Ausnahme: Link-Buttons und Social Buttons behalten ihre weiße Schrift */
+    /* Ausnahme: Link-Buttons und Social Buttons - cremefarbene Schrift */
     .link-button, .btn-instagram, .btn-youtube, .btn-facebook {
-      color: white !important;
+      color: rgba(229, 210, 186, 0.95) !important;
     }
     
     .link-button *, .btn-instagram *, .btn-youtube *, .btn-facebook * {
-      color: white !important;
+      color: rgba(229, 210, 186, 0.95) !important;
+    }
+    
+    /* Unterschriften etwas dunkler */
+    .link-button p, .btn-instagram p, .btn-youtube p, .btn-facebook p {
+      color: rgba(229, 210, 186, 0.8) !important;
     }
     
     /* Heading Images - Bild links, Text rechts */
@@ -267,14 +272,14 @@
         <img src="headings/1.png" alt="Urlaub in Pinéa" class="heading-image" onerror="this.style.display='none'">
         
         <div class="heading-text">
-          <h2 class="text-lg font-semibold" style="color: rgba(229, 210, 186, 0.95);">Urlaub in Pinéa</h2>
+          <h2 class="text-lg font-semibold" >Urlaub in Pinéa</h2>
           <p class="text-xs" style="color: rgba(229, 210, 186, 0.7);">Programm · Unterkünfte · Informationen</p>
         </div>
       </div>
       
       <div class="space-y-3">
         <!-- Neu: Aktuelles Programm (Woche) -->
-        <a href="https://www.pinea-programm.de/programm/aktuell/" target="_blank" rel="noopener" class="link-button link-has-image flex items-center p-4 rounded-xl text-white">
+        <a href="https://www.pinea-programm.de/programm/aktuell/" target="_blank" rel="noopener" class="link-button link-has-image flex items-center p-4 rounded-xl">
           <img src="headings/1_1.png" alt="" class="link-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
           <div class="link-icon-fallback">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -285,40 +290,40 @@
             </svg>
           </div>
           <div class="flex-1">
-            <span class="font-semibold" style="color: rgba(229, 210, 186, 0.95);">Aktuelles Programm</span>
-            <p class="text-xs mt-0.5" style="color: rgba(229, 210, 186, 0.8);">Veranstaltungen und Events der Woche</p>
+            <span class="font-semibold">Aktuelles Programm</span>
+            <p class="text-xs mt-0.5">Veranstaltungen und Events der Woche</p>
           </div>
           <svg class="w-5 h-5 opacity-60 ml-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
           </svg>
         </a>
         
-        <a href="https://pinea.aidaform.com/programmbuchung-2026" target="_blank" rel="noopener" class="link-button link-has-image flex items-center p-4 rounded-xl text-white">
+        <a href="https://pinea.aidaform.com/programmbuchung-2026" target="_blank" rel="noopener" class="link-button link-has-image flex items-center p-4 rounded-xl">
           <img src="headings/1_2.png" alt="" class="link-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
           <div class="link-icon-fallback"><i data-lucide="calendar" class="w-5 h-5"></i></div>
           <div class="flex-1">
-            <span class="font-semibold" style="color: rgba(229, 210, 186, 0.95);">Programmbuchung 2026</span>
-            <p class="text-xs mt-0.5" style="color: rgba(229, 210, 186, 0.8);">Jetzt Platz sichern</p>
+            <span class="font-semibold">Programmbuchung 2026</span>
+            <p class="text-xs mt-0.5">Jetzt Platz sichern</p>
           </div>
           <i data-lucide="external-link" class="w-5 h-5 opacity-60 ml-auto"></i>
         </a>
         
-        <a href="/spenden" class="link-button link-has-image flex items-center p-4 rounded-xl text-white">
+        <a href="/spenden" class="link-button link-has-image flex items-center p-4 rounded-xl">
           <img src="headings/1_3.png" alt="" class="link-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
           <div class="link-icon-fallback"><i data-lucide="hand-coins" class="w-5 h-5"></i></div>
           <div class="flex-1">
-            <span class="font-semibold" style="color: rgba(229, 210, 186, 0.95);">Spenden</span>
-            <p class="text-xs mt-0.5" style="color: rgba(229, 210, 186, 0.8);">Unterstütze unsere Arbeit finanziell</p>
+            <span class="font-semibold" >Spenden</span>
+            <p class="text-xs mt-0.5" >Unterstütze unsere Arbeit finanziell</p>
           </div>
           <i data-lucide="arrow-right" class="w-5 h-5 opacity-60 ml-auto"></i>
         </a>
         
-        <a href="https://www.pinea-programm.de/fileadmin/ppg/dokumente/PPG_-_Mitgliedsantrag___SEPA-Formular_2026.pdf" target="_blank" rel="noopener" class="link-button link-has-image flex items-center p-4 rounded-xl text-white">
+        <a href="https://www.pinea-programm.de/fileadmin/ppg/dokumente/PPG_-_Mitgliedsantrag___SEPA-Formular_2026.pdf" target="_blank" rel="noopener" class="link-button link-has-image flex items-center p-4 rounded-xl">
           <img src="headings/1_4.png" alt="" class="link-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
           <div class="link-icon-fallback"><i data-lucide="file-text" class="w-5 h-5"></i></div>
           <div class="flex-1">
-            <span class="font-semibold" style="color: rgba(229, 210, 186, 0.95);">Mitgliedsantrag der PPG e.V.</span>
-            <p class="text-xs mt-0.5" style="color: rgba(229, 210, 186, 0.8);">Werde Fördermitglied</p>
+            <span class="font-semibold" >Mitgliedsantrag der PPG e.V.</span>
+            <p class="text-xs mt-0.5" >Werde Fördermitglied</p>
           </div>
           <i data-lucide="external-link" class="w-5 h-5 opacity-60 ml-auto"></i>
         </a>
@@ -335,13 +340,13 @@
         <img src="headings/2.png" alt="Informationen" class="heading-image" onerror="this.style.display='none'">
         
         <div class="heading-text">
-          <h2 class="text-lg font-semibold" style="color: rgba(229, 210, 186, 0.95);">Informationen</h2>
+          <h2 class="text-lg font-semibold" >Informationen</h2>
           <p class="text-xs" style="color: rgba(229, 210, 186, 0.7);">Unterkünfte · Verein · Reiseplanung</p>
         </div>
       </div>
       
       <div class="space-y-3">
-        <a href="https://www.pinea-corsica.de/appartements/uebersicht/" target="_blank" rel="noopener" class="link-button link-has-image flex items-center p-4 rounded-xl text-white">
+        <a href="https://www.pinea-corsica.de/appartements/uebersicht/" target="_blank" rel="noopener" class="link-button link-has-image flex items-center p-4 rounded-xl">
           <img src="headings/2_1.png" alt="" class="link-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
           <div class="link-icon-fallback">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -349,15 +354,15 @@
             </svg>
           </div>
           <div class="flex-1">
-            <span class="font-semibold" style="color: rgba(229, 210, 186, 0.95);">Appartements</span>
-            <p class="text-xs mt-0.5" style="color: rgba(229, 210, 186, 0.8);">Unterkünfte im Resort</p>
+            <span class="font-semibold" >Appartements</span>
+            <p class="text-xs mt-0.5" >Unterkünfte im Resort</p>
           </div>
           <svg class="w-5 h-5 opacity-60 ml-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
           </svg>
         </a>
         
-        <a href="https://www.pinea-programm.de/verein/" target="_blank" rel="noopener" class="link-button link-has-image flex items-center p-4 rounded-xl text-white">
+        <a href="https://www.pinea-programm.de/verein/" target="_blank" rel="noopener" class="link-button link-has-image flex items-center p-4 rounded-xl">
           <img src="headings/2_2.png" alt="" class="link-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
           <div class="link-icon-fallback">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -365,8 +370,8 @@
             </svg>
           </div>
           <div class="flex-1">
-            <span class="font-semibold" style="color: rgba(229, 210, 186, 0.95);">Pinéa Programmgruppe e.V.</span>
-            <p class="text-xs mt-0.5" style="color: rgba(229, 210, 186, 0.8);">Mehr über unseren Verein</p>
+            <span class="font-semibold" >Pinéa Programmgruppe e.V.</span>
+            <p class="text-xs mt-0.5" >Mehr über unseren Verein</p>
           </div>
           <svg class="w-5 h-5 opacity-60 ml-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
@@ -374,7 +379,7 @@
         </a>
         
         <!-- Neu bei 2.3: Programm 2026 (verschoben aus 1.1) -->
-        <a href="https://www.pinea-programm.de/programm/uebersicht-2026/" target="_blank" rel="noopener" class="link-button link-has-image flex items-center p-4 rounded-xl text-white">
+        <a href="https://www.pinea-programm.de/programm/uebersicht-2026/" target="_blank" rel="noopener" class="link-button link-has-image flex items-center p-4 rounded-xl">
           <img src="headings/2_3.png" alt="" class="link-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
           <div class="link-icon-fallback">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -385,8 +390,8 @@
             </svg>
           </div>
           <div class="flex-1">
-            <span class="font-semibold" style="color: rgba(229, 210, 186, 0.95);">Programm 2026</span>
-            <p class="text-xs mt-0.5" style="color: rgba(229, 210, 186, 0.8);">Gesamtübersicht aller Veranstaltungen</p>
+            <span class="font-semibold" >Programm 2026</span>
+            <p class="text-xs mt-0.5" >Gesamtübersicht aller Veranstaltungen</p>
           </div>
           <svg class="w-5 h-5 opacity-60 ml-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
@@ -394,12 +399,12 @@
         </a>
         
         <!-- Verschoben auf 2.4: Reisebüro -->
-        <a href="https://reise-boerse-online.de/" target="_blank" rel="noopener" class="link-button link-has-image flex items-center p-4 rounded-xl text-white">
+        <a href="https://reise-boerse-online.de/" target="_blank" rel="noopener" class="link-button link-has-image flex items-center p-4 rounded-xl">
           <img src="headings/2_4.png" alt="" class="link-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
           <div class="link-icon-fallback"><i data-lucide="plane" class="w-5 h-5"></i></div>
           <div class="flex-1">
-            <span class="font-semibold" style="color: rgba(229, 210, 186, 0.95);">Reisebüro</span>
-            <p class="text-xs mt-0.5" style="color: rgba(229, 210, 186, 0.8);">Lass deine Reise planen</p>
+            <span class="font-semibold" >Reisebüro</span>
+            <p class="text-xs mt-0.5" >Lass deine Reise planen</p>
           </div>
           <i data-lucide="external-link" class="w-5 h-5 opacity-60 ml-auto"></i>
         </a>
@@ -411,14 +416,14 @@
         <img src="headings/3.png" alt="Social Media" class="heading-image" onerror="this.style.display='none'">
 
         <div class="heading-text">
-          <h2 class="text-lg font-semibold" style="color: rgba(229, 210, 186, 0.95);">Social Media</h2>
+          <h2 class="text-lg font-semibold" >Social Media</h2>
           <p class="text-xs" style="color: rgba(229, 210, 186, 0.7);">Folge uns für Updates</p>
         </div>
       </div>
       
       <div class="space-y-3">
         <!-- Instagram -->
-        <a href="https://www.instagram.com/pineacorsica" target="_blank" rel="noopener" class="link-button flex items-center gap-4 p-4 rounded-xl btn-instagram text-white">
+        <a href="https://www.instagram.com/pineacorsica" target="_blank" rel="noopener" class="link-button flex items-center gap-4 p-4 rounded-xl btn-instagram">
           <div class="w-10 h-10 rounded-md bg-white/20 flex items-center justify-center">
             <svg class="social-icon" viewBox="0 0 24 24">
               <rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2"/>
@@ -427,8 +432,8 @@
             </svg>
           </div>
           <div class="flex-1">
-            <span class="font-semibold" style="color: rgba(229, 210, 186, 0.95);">Instagram</span>
-            <p class="text-xs mt-0.5" style="color: rgba(229, 210, 186, 0.8);">@pineacorsica</p>
+            <span class="font-semibold" >Instagram</span>
+            <p class="text-xs mt-0.5" >@pineacorsica</p>
           </div>
           <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 opacity-60" viewBox="0 0 20 20" fill="currentColor">
             <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
@@ -436,7 +441,7 @@
         </a>
         
         <!-- YouTube -->
-        <a href="https://www.youtube.com/@pineacorsica" target="_blank" rel="noopener" class="link-button flex items-center gap-4 p-4 rounded-xl btn-youtube text-white">
+        <a href="https://www.youtube.com/@pineacorsica" target="_blank" rel="noopener" class="link-button flex items-center gap-4 p-4 rounded-xl btn-youtube">
           <div class="w-10 h-10 rounded-md bg-white/20 flex items-center justify-center">
             <svg class="social-icon" viewBox="0 0 24 24">
               <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z" fill="none" stroke="currentColor" stroke-width="2"/>
@@ -444,8 +449,8 @@
             </svg>
           </div>
           <div class="flex-1">
-            <span class="font-semibold" style="color: rgba(229, 210, 186, 0.95);">YouTube</span>
-            <p class="text-xs mt-0.5" style="color: rgba(229, 210, 186, 0.8);">@pineacorsica</p>
+            <span class="font-semibold" >YouTube</span>
+            <p class="text-xs mt-0.5" >@pineacorsica</p>
           </div>
           <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 opacity-60" viewBox="0 0 20 20" fill="currentColor">
             <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
@@ -453,15 +458,15 @@
         </a>
         
         <!-- Facebook (auskommentiert)
-        <a href="https://www.facebook.com/pineacorsica" target="_blank" rel="noopener" class="link-button flex items-center gap-4 p-4 rounded-xl btn-facebook text-white">
+        <a href="https://www.facebook.com/pineacorsica" target="_blank" rel="noopener" class="link-button flex items-center gap-4 p-4 rounded-xl btn-facebook">
           <div class="w-10 h-10 rounded-md bg-white/20 flex items-center justify-center">
             <svg class="social-icon" viewBox="0 0 24 24">
               <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
           </div>
           <div class="flex-1">
-            <span class="font-semibold" style="color: rgba(229, 210, 186, 0.95);">Facebook</span>
-            <p class="text-xs mt-0.5" style="color: rgba(229, 210, 186, 0.8);">@pineacorsica</p>
+            <span class="font-semibold" >Facebook</span>
+            <p class="text-xs mt-0.5" >@pineacorsica</p>
           </div>
           <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 opacity-60" viewBox="0 0 20 20" fill="currentColor">
             <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
