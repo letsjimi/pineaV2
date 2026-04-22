@@ -40,22 +40,24 @@
   
   <style>
     :root {
-      --bg-color: #1a1a1a;
-      --card-bg: rgba(40, 40, 40, 0.95);
-      --card-border: rgba(255, 255, 255, 0.1);
+      --bg-color: #E5D2BA;
+      --card-bg: rgba(68, 83, 102, 0.95);
+      --card-border: rgba(229, 210, 186, 0.15);
+      --text-color: #445366;
     }
     
     .dark {
-      --bg-color: #0d0d0d;
+      --bg-color: #000000;
       --card-bg: rgba(30, 30, 30, 0.95);
       --card-border: rgba(255, 255, 255, 0.05);
+      --text-color: #E5D2BA;
     }
     
     body {
       background: var(--bg-color);
+      color: var(--text-color);
       min-height: 100vh;
       font-family: 'Inter', system-ui, sans-serif;
-      color: #E5D2BA;
     }
     
     .glass-card {
@@ -228,6 +230,7 @@
         <img 
           id="logoImage"
           src="images/logo.png" 
+          data-dark-logo="images/logo_blk.png"
           alt="Logo der Pinéa Programmgruppe e.V." 
           class="w-48 h-48 object-contain mx-auto mb-6 drop-shadow-2xl transition-transform duration-500 hover:scale-105"
           onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 200%22%3E%3Crect x=%2220%22 y=%2220%22 width=%22160%22 height=%22160%22 fill=%22%230d9488%22/%3E%3Ctext x=%22100%22 y=%22125%22 text-anchor=%22middle%22 fill=%22white%22 font-size=%2250%22 font-family=%22Inter%22 font-weight=%22bold%22%3EPP%3C/text%3E%3C/svg%3E'"
@@ -415,7 +418,7 @@
           </svg>
         </a>
         
-        <!-- Facebook -->
+        <!-- Facebook (auskommentiert)
         <a href="https://www.facebook.com/pineacorsica" target="_blank" rel="noopener" class="link-button flex items-center gap-4 p-4 rounded-xl btn-facebook text-white">
           <div class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center">
             <svg class="social-icon" viewBox="0 0 24 24">
@@ -430,6 +433,7 @@
             <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
           </svg>
         </a>
+        -->
       </div>
     </div>
 
@@ -443,16 +447,34 @@
     // Initialize Lucide icons
     lucide.createIcons();
     
-    // Theme handling
+    // Theme handling mit Logo-Wechsel
+    function updateLogo() {
+      const logoImg = document.getElementById('logoImage');
+      if (!logoImg) return;
+      
+      const isDark = document.documentElement.classList.contains('dark');
+      const darkLogo = logoImg.getAttribute('data-dark-logo');
+      
+      if (isDark && darkLogo) {
+        logoImg.src = darkLogo;
+      } else {
+        logoImg.src = 'images/logo.png';
+      }
+    }
+    
     function toggleTheme() {
       document.documentElement.classList.toggle('dark');
       localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+      updateLogo();
     }
     
     // Load saved theme
     if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
       document.documentElement.classList.add('dark');
     }
+    
+    // Logo initial setzen
+    updateLogo();
   </script>
 </body>
 </html>
